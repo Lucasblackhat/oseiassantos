@@ -1,140 +1,45 @@
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+<noscript><img height="1" width="1" style="display:none" src="tr"></noscript>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link href="css/css2.css" rel="stylesheet">
 <style>
-    @font-face {
-      font-family: Gotham Rounded;
-      src: url("font.otf") format("opentype");
-    }
-    *, *::before, *::after {
-      box-sizing: border-box;
-      font-family: Gotham Rounded;
-    }
-    body {
-      padding: 0;
-      margin: 0;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      width: 100vw;
-      height: 100vh;
-      background: url("images/fundo.jpg");
-      background-size: cover;
-      background-repeat: no-repeat;
-    }
-    .container {
-      width: 700px;
-      max-width: 90%;
-    }
-    .black {
-      background-color: black;
-      padding: 10px;
-      text-align: center;
-      border-radius: 20px;
-      box-shadow: 0 0 10px 2px;
-    }
-    .answer {
-      display: grid;
-      grid-template-columns: repeat(2, auto);
-      gap: 10px;
-    }
-    @media (max-width: 991px) {
-      .answer {
-        display: grid;
-        grid-template-columns: repeat(1, auto);
-        gap: 10px;
+      html, body {
+        height: 100%;
+        width: 100%;
       }
-    }
-    .btn {
-      border-radius: 10px;
-      padding: 5px 10px;
-      font-size: 30px;
-      background-color: #f7ce6a;
-      outline: none;
-      text-decoration: none;
-      color: black;
-    }
-    .black h1 {
-      color: yellow;
-    }
-    .black p {
-      font-size: 18px;
-      color: white;
-    }
-    .hide {
-      display: none;
-    }
-  </style>
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #f5ffe9;
+        background: url(images/fundo.jpeg);
+        background-size: cover;
+        background-color: rgba(0, 0, 0, .8);
+        background-blend-mode: darken;
+        font-family: 'Ubuntu', sans-serif;
+        color: white;
+      }
+      p a {
+        color: white;
+      }
+    </style>
 </head>
 <body>
-<div class="container">
-<div class="black">
-<div id="step1">
-<div class="question">
-<h1>Pergunta 1</h1>
-<p>Você gostaria de descobrir esse segredo ?</p>
-</div>
-<div class="answer">
-<button class="btn" onclick="redirect()">SIM</button>
-<button class="btn" onclick="redirect()">NÃO</button>
-</div>
-</div>
-<div id="step2" class="hide">
-<div class="question">
-<h1>Pergunta 2</h1>
-<p>Você conhece alguem que trabalha na industria da saúde?</p>
-</div>
-<div class="answer">
-<button class="btn" onclick="step3()">SIM</button>
-<button class="btn" onclick="step3()">NÃO</button>
-</div>
-</div>
-<div id="step3" class="hide">
-<div class="question">
-<h1>Pergunta 3</h1>
-<p>Você tem dificuldades para se controlar na Hora H ?</p>
-</div>
-<div class="answer">
-<button class="btn" onclick="redirect()">SIM</button>
-<button class="btn" onclick="redirect()">NÃO</button>
-</div>
-</div>
-<div id="step4" class="hide">
-<div class="question">
-<h1>Pergunta 4</h1>
-<p>Parabéns você e outras 15 pessoas foram selecionadas para continuar e parcipar do programa...
-<br><br>
-O vídeo a seguir é exclusivo, poucas pessoas são selecionadas para assistir. Você realmente pretende vai assistir até o final?</p>
-</div>
-<div class="answer">
-<button class="btn" onclick="redirect()">SIM</button>
-<button class="btn" onclick="redirect()">NÃO</button>
+<div class="container py-5">
+<div class="row justify-content-center">
+<div class="col-lg-8 text-center">
+<a class="btn btn-primary btn-lg btn-block p-3 mb-4" href="https://app.monetizze.com.br/r/BNF1384297" style="font-size: 200%; font-family: &#x27;Ubuntu&#x27;, sans-serif; white-space: normal;">QUERO VER O VÍDEO EXPLICANDO</a>
+<p>© 2020 - Todos os direitos reservado. Este site não faz parte ou não é endossado pelo Facebook. Facebook é uma marca comercial da Facebook, Inc.</p>
+<p><a href="https://app.monetizze.com.br/r/BNF1384297">Terminos de Uso</a> | <a href="https://app.monetizze.com.br/r/BNF1384297">Política de Privacidade</a></p>
 </div>
 </div>
 </div>
-<p style="text-align: center; font-weight: bold;">© 2020 – Todos os direitos reservados. Este site não faz parte nem é endossado pelo Facebook. Facebook é uma marca comercial da Facebook, Inc.</p>
-<p style="text-align: center; font-weight: bold;"><a href="https://camilafonsecacosta.site/vsl" style="color: black;">Termos de Uso</a> | <a href="https://camilafonsecacosta.site/vsl" style="color: black;">Política de Privacidade</a></p>
-</div>
-<script>
-    function step2() {
-      document.getElementById("step1").classList.add("hide")
-      document.getElementById("step2").classList.remove("hide")
-    }
-    function step3() {
-      document.getElementById("step2").classList.add("hide")
-      document.getElementById("step3").classList.remove("hide")
-    }
-    function step4() {
-      document.getElementById("step3").classList.add("hide")
-      document.getElementById("step4").classList.remove("hide")
-    }
-    function redirect() {
-      location.href = "https://app.monetizze.com.br/r/BNF1384297" // link para redirecionar
-    }
-  </script>
+<script src="js/jquery-3.3.1.slim.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
 </body>
-</html></html>
+</html>
